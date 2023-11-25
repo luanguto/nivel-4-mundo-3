@@ -11,10 +11,10 @@
 %>
 <h2><%= produto == null ? "Incluir Produto" : "Alterar Produto" %></h2>
 <form action="ServletProdutoFC" method="post">
-    <!-- Campo oculto para definir a ação a ser realizada -->
+ 
     <input type="hidden" name="acao" value="<%= acao %>">
 
-    <!-- Campo oculto para enviar o ID do produto quando a ação for alterar -->
+   
     <% if ("alterar".equals(acao)) { %>
     <input type="hidden" name="id" value="<%= produto.getId() %>">
     <% } %>
